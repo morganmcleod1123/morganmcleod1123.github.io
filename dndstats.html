@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dndstyles.css">
+    <title>DnD Stat Tracker</title>
+</head>
+<body>
+    <header id="pageHeader">D&D Stat Tracker</header>
+    <div id="contentWrap">
+        <form>
+            <fieldset id="charcterSection">
+                <div class="statBlockBorder top"></div>
+                <div class="statBlockGradient"></div>
+                <header>Character Choice</header>
+                <div class="fancyDivider"></div>
+                <section class="charBlockGrid">
+                    <section class="charInputWrapper">
+                        <label for="radioBellos" class="radioChoice">
+                            <input type="radio" id="radioBellos" name="charSelect" value="Bellos"> Bellos</label>
+                        <label for="radioJin" class="radioChoice">
+                            <input type="radio" id="radioJin" name="charSelect" value="Jin"> Jin</label>
+                        <label for="radioCallum" class="radioChoice">
+                            <input type="radio" id="radioCallum" name="charSelect" value="Callum"> Callum</label>
+                    </section>
+                    <img id="charImg" src="images/DnDStatImgs/emptyImage.png" alt="Image of Character">
+                </section>
+                <div class="statBlockBorder bottom"></div>
+            </fieldset>
+            <fieldset id="statSection">
+                <div class="statBlockBorder top"></div>
+                <div class="statBlockGradient"></div>
+                <header>Stat Choice</header>
+                <div class="fancyDivider"></div>
+                <section class="statInputWrapper">
+                    <label for="damageDone" class="radioChoice">
+                        <input type="radio" name="statSelect" id="damageDone" value="damageDone"> Damage Done</label>
+                    <label for="damageTaken" class="radioChoice">
+                        <input type="radio" name="statSelect" id="damageTaken" value="damageTaken"> Damage Taken</label>
+                    <label for="healingDone" class="radioChoice">
+                        <input type="radio" name="statSelect" id="healingDone" value="healingDone"> Healing Done</label>
+                    <label for="healingReceived" class="radioChoice">
+                        <input type="radio" name="statSelect" id="healingReceived" value="healingReceived"> Healing Received</label>
+                    <label for="timesDowned" class="radioChoice">
+                        <input type="radio" name="statSelect" id="timesDowned" value="timesDowned"> Times Downed</label>
+                    <label for="exhaustionTaken" class="radioChoice">
+                        <input type="radio" name="statSelect" id="exhaustionTaken" value="exhaustionTaken"> Exhaustion Taken</label>
+                    <label for="spellsUsed" class="last radioChoice">
+                        <input type="radio" name="statSelect" id="spellsUsed"> Spells Used</label>
+                    <label for="enemiesKilled" class="last radioChoice">
+                        <input type="radio" name="statSelect" id="enemiesKilled" value="enemiesKilled"> Enemies Killed</label>
+                </section>
+                <div class="fancyDivider"></div>
+                <section class="buttonWrapper">
+                    <label id="statLabel" for="statValue">Stat Value <input id="statValue" type="number"></label>
+                    <div>
+                        <button id="statRecord" type="button" class="recordingButton">Record Stat</button>
+                        <button id="statPlusOne" type="button" class="recordingButton">Current Stat +1</button>
+                    </div>
+                </section>
+                <div class="statBlockBorder bottom"></div>
+            </fieldset>
+        </form>
+        <table>
+            <caption>Session Stats</caption>
+            <thead>
+                <tr id="headerRow">
+                    <th>Name</th>
+                    <th>Damage Done</th>
+                    <th>Damage Taken</th>
+                    <th>Healing Done</th>
+                    <th>Healing Received</th>
+                    <th>Times Downed</th>
+                    <th>Exhaustion Taken</th>
+                    <th>Spells Used</th>
+                    <th>Enemies Killed</th>
+                </tr>
+            </thead>
+            <!-- Right now, all of the 0s for the table are being defined here.
+            Ideally, the text inside of the HTML table should come from the ACTUAL data in the JS file-->
+            <tbody id="tableBody">
+                <tr id="bellosRow">
+                    <th>Bellos</th>
+                    <td class = "damageDone">0</td>
+                    <td class = "damageTaken">0</td>
+                    <td class = "healingDone">0</td>
+                    <td class = "healingReceived">0</td>
+                    <td class = "timesDowned">0</td>
+                    <td class = "exhaustionTaken">0</td>
+                    <td class = "spellsUsed">0</td>
+                    <td class = "enemiesKilled">0</td>
+                </tr>
+                <tr id="jinRow">
+                    <th>Jin</th>
+                    <td class = "damageDone">0</td>
+                    <td class = "damageTaken">0</td>
+                    <td class = "healingDone">0</td>
+                    <td class = "healingReceived">0</td>
+                    <td class = "timesDowned">0</td>
+                    <td class = "exhaustionTaken">0</td>
+                    <td class = "spellsUsed">0</td>
+                    <td class = "enemiesKilled">0</td>
+                </tr>
+                <tr id="callumRow">
+                    <th>Callum</th>
+                    <td class = "damageDone">0</td>
+                    <td class = "damageTaken">0</td>
+                    <td class = "healingDone">0</td>
+                    <td class = "healingReceived">0</td>
+                    <td class = "timesDowned">0</td>
+                    <td class = "exhaustionTaken">0</td>
+                    <td class = "spellsUsed">0</td>
+                    <td class = "enemiesKilled">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/dndscript.js"></script>
+</body>
+</html>

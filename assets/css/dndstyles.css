@@ -1,0 +1,175 @@
+:root{
+    /* #e7d39f; */
+    --statBlockBorder: #c2a052;
+    --darkestGradientValue: #e9cb7f;
+    --mainBlockBackgroundColor: #f9f3d8;
+    --redAccentColor: #832000;
+    --bodyBackground: #d6cebf;
+    --websiteBackground: #262d48;
+
+}
+/* Show me figuring this out */
+@font-face {
+    font-family: "Draconis";
+    src: url("../webfonts/draconis/Draconis.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bodyBackground);
+}
+
+#pageHeader{
+    text-align: center;
+    font-size: 500%;
+    margin: 40px;
+    font-family: "Draconis", sans-serif;
+    color: var(--redAccentColor);
+}
+
+#contentWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    width: 400px;
+    height: 400px;
+    background-color: var(--mainBlockBackgroundColor);
+    padding: 20px;
+    position: relative;
+    margin: 0 10px;
+}
+
+.statBlockGradient{
+    width: 440px;
+    height: 40px;
+    margin: -20px -20px 0 -20px;
+    background: linear-gradient(var(--darkestGradientValue), var(--mainBlockBackgroundColor));
+}
+
+.statBlockBorder{
+    width: 450px;
+    height: 10px;
+    position: absolute; 
+    left: -5px;
+    background-color: var(--statBlockBorder);
+    border: 1px solid black;
+}
+
+.top{
+    top: -5px;
+}
+
+.bottom{
+    bottom: -5px;
+}
+
+/* Letter Spacing change quite Goated */
+fieldset header {
+    text-align: left;
+    font-size: 180%;
+    margin-top: -20px;
+    font-family: "Draconis", sans-serif;
+    color: var(--redAccentColor);
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+}
+
+.radioChoice{
+    display: block;
+}
+
+/* Char selection */
+
+.charBlockGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.charInputWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.charInputWrapper label{
+    font-size: larger;
+}
+
+#charImg{
+    width: 200px;
+    height: 200px;
+    background-color: #c2a052;
+    border: 3px solid var(--redAccentColor);
+}
+
+/* Stat selection */
+
+.statInputWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: -10px 0;
+}
+
+.statInputWrapper label{
+    margin: 5% 0;
+    border-bottom: 1px solid var(--redAccentColor);
+    padding-bottom: 10px;
+}
+
+.last.radioChoice{
+    border: none;
+}
+
+.fancyDivider{
+    width: 0;
+    height: 0;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 25rem solid var(--redAccentColor);
+    margin: 4% 0;
+}
+
+/* Stat button formatting */
+
+.buttonWrapper{
+    display: flex;
+}
+
+#statValue{
+    margin-top: 4px;
+}
+
+.recordingButton{
+    margin: 5px 0;
+}
+
+/* Table formatting */
+
+table{
+    border: 2px solid black;
+    background-color: var(--statBlockBorder);
+}
+
+table caption{
+    text-align: left;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+th, td{
+    border: 1px solid black;
+    background-color: var(--mainBlockBackgroundColor);
+}
