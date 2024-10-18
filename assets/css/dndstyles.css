@@ -5,13 +5,12 @@
     --mainBlockBackgroundColor: #f9f3d8;
     --redAccentColor: #832000;
     --bodyBackground: #d6cebf;
-    --websiteBackground: #262d48;
 
 }
 /* Show me figuring this out */
 @font-face {
     font-family: "Draconis";
-    src: url("../webfonts/draconis/Draconis.otf") format("opentype");
+    src: url("fonts/draconis/Draconis.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -23,6 +22,7 @@
 body{
     background-color: var(--bodyBackground);
 }
+
 
 #pageHeader{
     text-align: center;
@@ -44,7 +44,7 @@ fieldset{
     background-color: var(--mainBlockBackgroundColor);
     padding: 20px;
     position: relative;
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 
 .statBlockGradient{
@@ -55,7 +55,7 @@ fieldset{
 }
 
 .statBlockBorder{
-    width: 450px;
+    width: 102%;
     height: 10px;
     position: absolute; 
     left: -5px;
@@ -68,7 +68,7 @@ fieldset{
 }
 
 .bottom{
-    bottom: -5px;
+    bottom: -10px;
 }
 
 /* Letter Spacing change quite Goated */
@@ -79,6 +79,7 @@ fieldset header {
     font-family: "Draconis", sans-serif;
     color: var(--redAccentColor);
 }
+
 
 form{
     display: flex;
@@ -172,4 +173,16 @@ table caption{
 th, td{
     border: 1px solid black;
     background-color: var(--mainBlockBackgroundColor);
+}
+
+/* Media Queries */
+
+@media (max-width: 600px){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    #charBorder{
+        bottom: -90px;
+    }
 }
