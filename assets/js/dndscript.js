@@ -4,6 +4,8 @@ const bellosRow = document.getElementById("bellosRow");
 const bellosRadio = document.getElementById("radioBellos");
 const charButtons = document.getElementsByName("charSelect");
 const charDisplay = document.getElementById("charImg");
+// Establish query to check if on mobile.
+const mediaQuery = window.matchMedia('(max-width: 600px)');
 
 let playerData = [
     {
@@ -41,20 +43,32 @@ let playerData = [
     }
 ];
 
-let charImgMap = {"Bellos" : "Bellos.png", "Jin" : "Jin.png", "Callum" : "Callum.png"};
+const charImgMap = {"Bellos" : "Bellos.png", "Jin" : "Jin.png", "Callum" : "Callum.png"};
 
 // Set up button functionality
 recordButton.onclick = recordStat;
 plusButton.onclick = plusOneFunction;
 
-// Very clean and concise method of updating the portrait
+// Event Listener to update Portrait (smurfing)
 charButtons.forEach(char => {
     char.addEventListener("click", (event) => {
-        charDisplay.src = "../../images/DnDStatImgs/" + charImgMap[event.target.value];
+        charDisplay.src = "images/" + charImgMap[event.target.value];
     })
 })
 
+// When screen width goes above or below 600px, restructure HTML
+function handleMediaChanges(e){
+    if(e.matches){
+        console.log("The screen is small!!!");
+    } else {
+        console.log("The screen is large again!");
+    }
+}
 
+mediaQuery.addEventListener("change", handleMediaChanges);
+handleMediaChanges(mediaQuery);
+
+// Adds 1 to value of selected player and stat
 function plusOneFunction() {
     console.log(charButtons);
     let selectedCharacter = document.querySelector('input[name="charSelect"]:checked');
@@ -64,7 +78,7 @@ function plusOneFunction() {
 }
 
 function testing(){
-    console.log("Bellos has been selected!");
+    console.log("This is a test of the super test.");
 }
 
 function printTheObject(objectPrinted){
