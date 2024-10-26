@@ -52,7 +52,7 @@ plusButton.onclick = plusOneFunction;
 // Event Listener to update Portrait (smurfing)
 charButtons.forEach(char => {
     char.addEventListener("click", (event) => {
-        charDisplay.src = "images/" + charImgMap[event.target.value];
+        charDisplay.src = "../images/" + charImgMap[event.target.value];
     })
 })
 
