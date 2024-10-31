@@ -10,7 +10,7 @@
 /* Show me figuring this out */
 @font-face {
     font-family: "Draconis";
-    src: url("fonts/draconis/Draconis.otf") format("opentype");
+    src: url("../webfonts/draconis/Draconis.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
